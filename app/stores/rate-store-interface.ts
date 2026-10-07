@@ -4,6 +4,7 @@ export interface RateLimitRecord {
     lastRefill?: number;
     lastRequest?: number;
     resetAt?: number;
+    timestamps?: number[];
 
 }
 
@@ -47,6 +48,3 @@ export interface RateLimitAlgorithm {
         store: RateStoreInterface
     ): Promise<RateLimitResult>;
 }
-
-
-
